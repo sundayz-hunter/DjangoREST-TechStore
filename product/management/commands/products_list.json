@@ -1,0 +1,371 @@
+[
+    {
+        "name": "Laptop Pro",
+        "description": "High-performance laptop with Intel i9 processor and 16GB RAM.",
+        "price": "1200.00",
+        "sku": "LAPTOP001",
+        "stock": 15,
+        "category": "Computers",
+        "is_active": true
+    },
+    {
+        "name": "Gaming Desktop",
+        "description": "Desktop for gaming with AMD Ryzen 7 and NVIDIA RTX 3060.",
+        "price": "1500.00",
+        "sku": "DESKTOP002",
+        "stock": 10,
+        "category": "Computers",
+        "is_active": true
+    },
+    {
+        "name": "External SSD 1TB",
+        "description": "Portable SSD with fast transfer speeds.",
+        "price": "150.00",
+        "sku": "SSD001",
+        "stock": 30,
+        "category": "Storage",
+        "is_active": true
+    },
+    {
+        "name": "Mechanical Keyboard",
+        "description": "RGB mechanical keyboard with customizable keys.",
+        "price": "100.00",
+        "sku": "KEYBOARD003",
+        "stock": 50,
+        "category": "Accessories",
+        "is_active": false
+    },
+    {
+        "name": "Wireless Mouse",
+        "description": "Ergonomic wireless mouse with long battery life.",
+        "price": "40.00",
+        "sku": "MOUSE004",
+        "stock": 80,
+        "category": "Accessories",
+        "is_active": true
+    },
+    {
+        "name": "NAS Storage 4TB",
+        "description": "Network-attached storage with RAID support.",
+        "price": "400.00",
+        "sku": "NAS005",
+        "stock": 5,
+        "category": "Storage",
+        "is_active": true
+    },
+    {
+        "name": "Graphics Card RTX 4070",
+        "description": "High-performance graphics card for gaming and rendering.",
+        "price": "700.00",
+        "sku": "GPU006",
+        "stock": 7,
+        "category": "Components",
+        "is_active": true
+    },
+    {
+        "name": "27-inch 4K Monitor",
+        "description": "Ultra HD monitor with vibrant color reproduction.",
+        "price": "300.00",
+        "sku": "MONITOR007",
+        "stock": 20,
+        "category": "Monitors",
+        "is_active": false
+    },
+    {
+        "name": "Power Supply Unit 750W",
+        "description": "Efficient power supply unit for gaming PCs.",
+        "price": "120.00",
+        "sku": "PSU008",
+        "stock": 35,
+        "category": "Components",
+        "is_active": true
+    },
+    {
+        "name": "CPU Cooler",
+        "description": "High-performance cooler for CPUs.",
+        "price": "50.00",
+        "sku": "COOLER009",
+        "stock": 40,
+        "category": "Components",
+        "is_active": true
+    },
+    {
+        "name": "16GB RAM Module",
+        "description": "High-speed DDR4 RAM module.",
+        "price": "80.00",
+        "sku": "RAM010",
+        "stock": 25,
+        "category": "Components",
+        "is_active": true
+    },
+    {
+        "name": "500GB NVMe SSD",
+        "description": "Ultra-fast NVMe SSD for laptops and desktops.",
+        "price": "90.00",
+        "sku": "SSD011",
+        "stock": 60,
+        "category": "Storage",
+        "is_active": true
+    },
+    {
+        "name": "Gaming Headset",
+        "description": "Surround sound gaming headset with noise-canceling mic.",
+        "price": "70.00",
+        "sku": "HEADSET012",
+        "stock": 45,
+        "category": "Accessories",
+        "is_active": true
+    },
+    {
+        "name": "USB-C Docking Station",
+        "description": "Docking station with multiple ports for laptops.",
+        "price": "120.00",
+        "sku": "DOCK013",
+        "stock": 15,
+        "category": "Accessories",
+        "is_active": true
+    },
+    {
+        "name": "1080p Webcam",
+        "description": "HD webcam for video calls and streaming.",
+        "price": "50.00",
+        "sku": "WEBCAM014",
+        "stock": 30,
+        "category": "Accessories",
+        "is_active": true
+    },
+    {
+        "name": "Wi-Fi Router AX1800",
+        "description": "High-speed Wi-Fi 6 router with dual-band support.",
+        "price": "80.00",
+        "sku": "ROUTER015",
+        "stock": 40,
+        "category": "Networking",
+        "is_active": true
+    },
+    {
+        "name": "Ethernet Cable 10m",
+        "description": "Cat 6 Ethernet cable for high-speed wired connections.",
+        "price": "15.00",
+        "sku": "CABLE016",
+        "stock": 100,
+        "category": "Networking",
+        "is_active": true
+    },
+    {
+        "name": "Portable Hard Drive 2TB",
+        "description": "Compact external hard drive for backup and storage.",
+        "price": "70.00",
+        "sku": "HDD017",
+        "stock": 20,
+        "category": "Storage",
+        "is_active": false
+    },
+    {
+        "name": "Cooling Pad for Laptops",
+        "description": "Cooling pad with dual fans for laptops.",
+        "price": "30.00",
+        "sku": "PAD018",
+        "stock": 50,
+        "category": "Accessories",
+        "is_active": true
+    },
+    {
+        "name": "USB Flash Drive 128GB",
+        "description": "Portable USB drive with large storage capacity.",
+        "price": "25.00",
+        "sku": "FLASH019",
+        "stock": 80,
+        "category": "Storage",
+        "is_active": true
+    },
+    {
+        "name": "Mini ITX Motherboard",
+        "description": "Compact motherboard for small form factor PCs.",
+        "price": "150.00",
+        "sku": "MOTHERBOARD020",
+        "stock": 10,
+        "category": "Components",
+        "is_active": true
+    },
+    {
+        "name": "USB Hub 7-Port",
+        "description": "USB hub with 7 ports and fast charging capability.",
+        "price": "40.00",
+        "sku": "HUB021",
+        "stock": 60,
+        "category": "Accessories",
+        "is_active": false
+    },
+    {
+        "name": "PCIe Wi-Fi Adapter",
+        "description": "Wireless adapter for desktop PCs.",
+        "price": "40.00",
+        "sku": "ADAPTER022",
+        "stock": 0,
+        "category": "Networking",
+        "is_active": true
+    },
+    {
+        "name": "UPS Backup Power",
+        "description": "Uninterruptible power supply for PCs and servers.",
+        "price": "200.00",
+        "sku": "UPS023",
+        "stock": 8,
+        "category": "Power Supplies",
+        "is_active": true
+    },
+    {
+        "name": "Case Fans 120mm",
+        "description": "High airflow fans for PC cases.",
+        "price": "15.00",
+        "sku": "FANS024",
+        "stock": 70,
+        "category": "Components",
+        "is_active": true
+    },
+    {
+        "name": "Video Capture Card",
+        "description": "Card for streaming and video recording.",
+        "price": "100.00",
+        "sku": "CAPTURE025",
+        "stock": 15,
+        "category": "Accessories",
+        "is_active": true
+    },
+    {
+        "name": "Ergonomic Office Chair",
+        "description": "Adjustable ergonomic chair with lumbar support for long hours of work.",
+        "price": "250.00",
+        "sku": "CHAIR026",
+        "stock": 20,
+        "category": "Furniture",
+        "is_active": true
+    },
+    {
+        "name": "Dual Monitor Stand",
+        "description": "Adjustable stand for two monitors up to 32 inches.",
+        "price": "80.00",
+        "sku": "STAND027",
+        "stock": 15,
+        "category": "Accessories",
+        "is_active": true
+    },
+    {
+        "name": "Blue Light Blocking Glasses",
+        "description": "Protect your eyes from screen glare with these stylish glasses.",
+        "price": "30.00",
+        "sku": "GLASSES028",
+        "stock": 50,
+        "category": "Health",
+        "is_active": true
+    },
+    {
+        "name": "Smartphone Tripod",
+        "description": "Portable tripod with adjustable height and phone mount.",
+        "price": "25.00",
+        "sku": "TRIPOD029",
+        "stock": 30,
+        "category": "Accessories",
+        "is_active": true
+    },
+    {
+        "name": "Drawing Tablet",
+        "description": "Graphic tablet with stylus for digital art and design.",
+        "price": "200.00",
+        "sku": "TABLET030",
+        "stock": 10,
+        "category": "Accessories",
+        "is_active": true
+    },
+    {
+        "name": "Portable Projector",
+        "description": "Compact projector with HD output for presentations and movies.",
+        "price": "300.00",
+        "sku": "PROJECTOR031",
+        "stock": 8,
+        "category": "Accessories",
+        "is_active": true
+    },
+    {
+        "name": "Smart Power Strip",
+        "description": "Power strip with surge protection and smart home compatibility.",
+        "price": "50.00",
+        "sku": "STRIP032",
+        "stock": 40,
+        "category": "Power Supplies",
+        "is_active": true
+    },
+    {
+        "name": "Wireless Earbuds",
+        "description": "True wireless earbuds with noise cancellation and long battery life.",
+        "price": "100.00",
+        "sku": "EARBUDS033",
+        "stock": 35,
+        "category": "Accessories",
+        "is_active": true
+    },
+    {
+        "name": "Smartwatch",
+        "description": "Smartwatch with fitness tracking and notification support.",
+        "price": "150.00",
+        "sku": "WATCH034",
+        "stock": 25,
+        "category": "Wearables",
+        "is_active": true
+    },
+    {
+        "name": "VR Headset",
+        "description": "Virtual reality headset for immersive gaming and experiences.",
+        "price": "400.00",
+        "sku": "VR035",
+        "stock": 12,
+        "category": "Accessories",
+        "is_active": true
+    },
+    {
+        "name": "Thermal Paste",
+        "description": "High-quality thermal paste for CPU and GPU cooling.",
+        "price": "10.00",
+        "sku": "PASTE036",
+        "stock": 100,
+        "category": "Components",
+        "is_active": true
+    },
+    {
+        "name": "Surge Protector",
+        "description": "Protect your electronics from power surges.",
+        "price": "30.00",
+        "sku": "PROTECTOR037",
+        "stock": 50,
+        "category": "Power Supplies",
+        "is_active": true
+    },
+    {
+        "name": "Laptop Sleeve 15-inch",
+        "description": "Protective neoprene sleeve for 15-inch laptops.",
+        "price": "20.00",
+        "sku": "SLEEVE038",
+        "stock": 60,
+        "category": "Accessories",
+        "is_active": false
+    },
+    {
+        "name": "Wireless Charging Pad",
+        "description": "Fast wireless charging pad compatible with Qi-enabled devices.",
+        "price": "40.00",
+        "sku": "CHARGER039",
+        "stock": 0,
+        "category": "Accessories",
+        "is_active": true
+    },
+    {
+        "name": "Bluetooth Speaker",
+        "description": "Portable Bluetooth speaker with excellent sound quality.",
+        "price": "75.00",
+        "sku": "SPEAKER040",
+        "stock": 20,
+        "category": "Accessories",
+        "is_active": true
+    }
+]

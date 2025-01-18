@@ -1,0 +1,53 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f8f9fa;">
+        <div class="row justify-content-center w-100">
+            <div class="col-md-6 col-lg-4">
+                <div class="card p-4" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background-color: #fff;">
+                    <h2 class="text-center mb-4">Welcome to Tech Store</h2>
+                    <p class="text-center mb-4">
+                        Tech Store API is designed to showcase the products available in our store.
+                        <br>Internally, it allows store managers to place and manage orders seamlessly.
+                    </p>
+
+                    <div class="mb-4">
+                        {% if user.is_authenticated %}
+                            <p class="text-center">Welcome, {{ user.username }}!</p>
+                            <form action="{% url 'logout' %}" method="POST">
+                                {% csrf_token %}
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-secondary">Log Out</button>
+                                </div>
+                            </form>
+                        {% else %}
+                            <h3 class="text-center mb-3">Login to Access the System</h3>
+                            <form method="POST">
+                                {% csrf_token %}
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Username or Email</label>
+                                    <input type="text" id="username" name="username" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" id="password" name="password" class="form-control" required>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary">Log In</button>
+                                </div>
+                            </form>
+                        {% endif %}
+                    </div>
+
+                    <div class="">
+                        {% if not user.is_authenticated %}
+                            <p class="">
+                                Not part of the team? <a href="{% url 'product-list' %}" class="btn btn-link" target="_blank">Click here</a>to explore our products as a customer.
+                            </p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,7 @@
+django
+django-dotenv
+djangorestframework
+django-filter
+pillow
+django-silk
+drf-spectacular
