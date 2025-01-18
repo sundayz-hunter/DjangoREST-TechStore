@@ -64,7 +64,7 @@ It is a RESTful API that enables users to interact with the store in different w
 manager:manager
 ```
 
-#### Vendor:
+#### Vendor creds:
   ```
   vendor:vendor
   ```
