@@ -37,16 +37,19 @@ It is a RESTful API that enables users to interact with the store in different w
    pip install -r requirements.txt
    ```
 
-3. **Database Setup**:
+3. **Environement file**: 
+- Rename `.env-dist` to `.env` without making any modifications to use the basic SQLite3 database, or adapt it according to your specific database information.
+
+4. **Database Setup**:
      ```bash
      python manage.py makemigrations
      python manage.py migrate
      ```
-4. **Populate Database**:
+5. **Populate Database**:
      ```bash
      python manage.py populate_db
      ```
-5. **Start Server**:
+6. **Start Server**:
      ```bash
      python manage.py runserver
      ```
