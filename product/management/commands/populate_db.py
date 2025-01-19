@@ -74,8 +74,7 @@ class Command(BaseCommand):
                 self.stderr.write(self.style.ERROR(f'Error: {user} user not found.'))
                 continue
 
-            # Créer des commandes fictives pour l'utilisateur
-            for _ in range(5):  # Ajuste le nombre de commandes ici
+            for _ in range(5):
                 order = Order.objects.create(user=user)
                 for product in random.sample(list(Product.objects.all()), 4):
                     OrderItem.objects.create(
