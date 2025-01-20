@@ -30,10 +30,11 @@ class OrderSerializer(serializers.ModelSerializer):
         model = Order
         fields = (
             'order_id',
+            'status',
+            'url',
             'created_at',
             'updated_at',
             'user',
-            'status',
             'items',
             'total_price',
         )
@@ -46,6 +47,12 @@ class OrderSerializer(serializers.ModelSerializer):
     def total(self, obj):
         order_items = obj.items.all()
         return sum(order_item.item_subtotal for order_item in order_items)
+
+    def get_url(self, obj):
+        request = self.context.get('request')
+        if request is None:
+            return None
+        return request.build_absolute_uri(obj.get_absolute_url())
 
     def create(self, validated_data):
         items_data = validated_data.pop('items')
