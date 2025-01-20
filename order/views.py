@@ -22,3 +22,6 @@ class OrdersViewSet(viewsets.ModelViewSet):
             qs = qs.filter(user=self.request.user)
 
         return qs
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)

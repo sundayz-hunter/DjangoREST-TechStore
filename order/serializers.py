@@ -21,6 +21,7 @@ class OrderItemSerializer(serializers.ModelSerializer):
 
 class OrderSerializer(serializers.ModelSerializer):
     order_id = serializers.UUIDField(read_only=True)
+    user = serializers.CharField(read_only=True)
     items = OrderItemSerializer(many=True)
     total_price = serializers.SerializerMethodField(method_name='total')
 
