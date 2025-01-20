@@ -79,6 +79,31 @@
 					"response": []
 				},
 				{
+					"name": "Product Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/products/68",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"68"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Product Create",
 					"request": {
 						"auth": {
@@ -258,31 +283,6 @@
 					"response": []
 				},
 				{
-					"name": "Product Detail",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/v1/products/68",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"v1",
-								"products",
-								"68"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Product Out Of Stock",
 					"request": {
 						"auth": {
@@ -445,6 +445,212 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Order Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "0b3ca6ba9e6efe9d2ba7698edef8b5d93b4d7aa2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/orders/354143d6-bb0f-4613-ac4b-2b8ddb812f32/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"354143d6-bb0f-4613-ac4b-2b8ddb812f32",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "0b3ca6ba9e6efe9d2ba7698edef8b5d93b4d7aa2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": 1,\r\n    \"status\": \"Confirmed\",\r\n    \"items\": [\r\n        {\r\n            \"product_name\": \"Graphics Card RTX 4070\",\r\n            \"quantity\": 4\r\n        },\r\n        {\r\n            \"product_name\": \"27-inch 4K Monitor\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/orders/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "0b3ca6ba9e6efe9d2ba7698edef8b5d93b4d7aa2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"Confirmed\",\r\n    \"items\": [\r\n        {\r\n            \"product_name\": \"Graphics Card RTX 4070\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"product_name\": \"Power Supply Unit 750W\",\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/orders/354143d6-bb0f-4613-ac4b-2b8ddb812f32/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"354143d6-bb0f-4613-ac4b-2b8ddb812f32",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Partial Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "0b3ca6ba9e6efe9d2ba7698edef8b5d93b4d7aa2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"Confirmed\",\r\n    \"items\": [\r\n        {\r\n            \"product_name\": \"Graphics Card RTX 4070\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"product_name\": \"Power Supply Unit 750W\",\r\n            \"product_price\": \"120.00\",\r\n            \"quantity\": 2,\r\n            \"item_subtotal\": 240.0\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/orders/354143d6-bb0f-4613-ac4b-2b8ddb812f32/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"354143d6-bb0f-4613-ac4b-2b8ddb812f32",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "0b3ca6ba9e6efe9d2ba7698edef8b5d93b4d7aa2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/orders/a637f75c-f1b5-4279-a510-09b739f25d01/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"a637f75c-f1b5-4279-a510-09b739f25d01",
+								""
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -458,7 +664,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\" : \"manager\",\r\n    \"password\" : \"manager\"\r\n}",
+							"raw": "{\r\n    \"username\" : \"vendor\",\r\n    \"password\" : \"vendor\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -521,6 +727,31 @@
 					"response": []
 				},
 				{
+					"name": "Product Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/products/68",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"68"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Product Create",
 					"request": {
 						"auth": {
@@ -700,31 +931,6 @@
 					"response": []
 				},
 				{
-					"name": "Product Detail",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/v1/products/68",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"v1",
-								"products",
-								"68"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Product Out Of Stock",
 					"request": {
 						"auth": {
@@ -882,6 +1088,212 @@
 								"api",
 								"v1",
 								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "0b3ca6ba9e6efe9d2ba7698edef8b5d93b4d7aa2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/orders/354143d6-bb0f-4613-ac4b-2b8ddb812f32/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"354143d6-bb0f-4613-ac4b-2b8ddb812f32",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "0b3ca6ba9e6efe9d2ba7698edef8b5d93b4d7aa2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": 1,\r\n    \"status\": \"Confirmed\",\r\n    \"items\": [\r\n        {\r\n            \"product_name\": \"Graphics Card RTX 4070\",\r\n            \"quantity\": 4\r\n        },\r\n        {\r\n            \"product_name\": \"27-inch 4K Monitor\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/orders/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "0b3ca6ba9e6efe9d2ba7698edef8b5d93b4d7aa2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"Confirmed\",\r\n    \"items\": [\r\n        {\r\n            \"product_name\": \"Graphics Card RTX 4070\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"product_name\": \"Power Supply Unit 750W\",\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/orders/354143d6-bb0f-4613-ac4b-2b8ddb812f32/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"354143d6-bb0f-4613-ac4b-2b8ddb812f32",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Partial Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "0b3ca6ba9e6efe9d2ba7698edef8b5d93b4d7aa2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"Confirmed\",\r\n    \"items\": [\r\n        {\r\n            \"product_name\": \"Graphics Card RTX 4070\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"product_name\": \"Power Supply Unit 750W\",\r\n            \"product_price\": \"120.00\",\r\n            \"quantity\": 2,\r\n            \"item_subtotal\": 240.0\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/orders/354143d6-bb0f-4613-ac4b-2b8ddb812f32/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"354143d6-bb0f-4613-ac4b-2b8ddb812f32",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "0b3ca6ba9e6efe9d2ba7698edef8b5d93b4d7aa2",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/orders/a637f75c-f1b5-4279-a510-09b739f25d01/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"a637f75c-f1b5-4279-a510-09b739f25d01",
 								""
 							]
 						}
